@@ -60,3 +60,7 @@ export function canIUseCanvas2d() {
 export function canIUseGetUserProfile() {
   return !!wx.getUserProfile;
 }
+
+export function canIUseWxsEvent() {
+  return gte('2.4.4');
+}
