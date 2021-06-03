@@ -4,6 +4,10 @@
 
 可以左右滑动来展示操作按钮的单元格组件。
 
+fork的本意是想通过 `wxs` 响应事件来避免频繁的 `setData` 来实现动画。
+思路是通过 `canIUseWxsEvent` 判断是否可以使用，不可以的话依然采用原来代码，可以的话，在`wxs`中重写之前逻辑，`props` 和 `data` 可以通过属性挂载在 `wxml`上。
+但是 `./index.ts` 中的 `ARRAY` 变量，实现了某一单元格展开时，关闭其他单元格，并且在 `destroyed` 生命周期回调里过滤当前组件。暂时想不到如何在 `wxs` 实现类似功能。
+
 ### 引入
 
 在`app.json`或`index.json`中引入组件，详细介绍见[快速上手](#/quickstart#yin-ru-zu-jian)。
