@@ -1,4 +1,5 @@
 import { VantComponent } from '../common/component';
+import { canIUseWxsEvent } from '../common/version';
 import { touch } from '../mixins/touch';
 import { range } from '../common/utils';
 
@@ -38,6 +39,7 @@ VantComponent({
   data: {
     catchMove: false,
     wrapperStyle: '',
+    canIUseWxsEvent: canIUseWxsEvent(),
   },
 
   created() {

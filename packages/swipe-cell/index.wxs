@@ -1,0 +1,20 @@
+/* eslint-disable */
+function startDrag(event, ins) {
+  console.log(event, ins, 'startDrag')
+  // var data = ins.getDataset()
+  // console.log(event, ins, data)
+}
+function onDrag(event, ins) {
+  console.log('onDrag')
+  // var data = ins.getDataset()
+  // console.log(event, ins, data)
+}
+function endDrag() {
+  console.log('endDrag')
+}
+
+module.exports = {
+  startDrag: startDrag,
+  onDrag: onDrag,
+  endDrag: endDrag
+}
